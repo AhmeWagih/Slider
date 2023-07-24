@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.slider-container {
+    margin: 10px auto;
+    width: 800px;
+    height: 250px;
+    position: relative;
+}
+
+.slider-container img {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: 1;
+    max-height: 250px;
+    width: 100%;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+}
+
+.slider-container img.active {
+    opacity: 1;
+}
+
+.slider-container .slider-number {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #FFF;
+    padding: 5px 10px;
+    font-size: 20px;
+    z-index: 2;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.slider-control {
+    width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.slider-control .prev,
+.slider-control .next {
+    background-color: #009688;
+    color: #FFF;
+    font-size: 20px;
+    width: 80px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 5px;
+    user-select: none;
+    width: 20%;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.slider-control .prev {
+    float: left;
+}
+
+.slider-control .next {
+    float: right;
+}
+
+.slider-control .prev.disable,
+.slider-control .next.disable {
+    background-color: rgba(0, 150, 136, 0.5);
+    cursor: no-drop;
+}
+
+.slider-control .indicator {
+    width: 60%;
+    float: left;
+    padding: 5px 95px;
+}
+
+.slider-control.indicator ul {
+    list-style: none;
+    margin: 0;
+}
+
+.slider-control .indicator ul li {
+    display: inline-block;
+    background-color: #f6f6f6;
+    color: #333;
+    font-weight: bold;
+    height: 28px;
+    width: 28px;
+    border-radius: 4px;
+    text-align: center;
+    margin: 0 2px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    cursor: pointer;
+    line-height: 28px;
+}
+
+.slider-control .indicator ul li.active {
+    background-color: #009688;
+    color: #fff;
+}
